@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <script
+      defer
+      src="https://kit.fontawesome.com/0d3f998bf1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/app.css" />
+    <title>Guess-Me</title>
+  </head>
+
+  <body>
+    <header>
+      <img src="img/layout/logo.png" />
+      <h1>Guess Who <i class="fa-solid fa-circle-question"></i></h1>
+    </header>
+
+    <main>
+      <section class="game-start">
+        <h2>
+          <i class="fa-solid fa-person-circle-question"></i>
+          Think of Someone...
+        </h2>
+        <button class="btn btn-start">
+          <div class="i-wrapper-1">
+            <div class="i-wrapper">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+          <span>I'm Ready!</span>
+        </button>
+      </section>
+
+      <section class="quest" style="display: none">
+        <h2></h2>
+        <button class="btn btn-yes" data-ans="yes">
+          <div class="i-wrapper-1">
+            <div class="i-wrapper">
+              <i class="fa-solid fa-thumbs-up"></i>
+            </div>
+          </div>
+          <span>Yes</span>
+        </button>
+
+        <button class="btn btn-no" data-and="no">
+          <div class="i-wrapper-1">
+            <div class="i-wrapper">
+              <i class="fa-solid fa-thumbs-down"></i>
+            </div>
+          </div>
+          <span>No</span>
+        </button>
+      </section>
+
+      <section class="new-quest" style="display: none">
+        <h2>OK, I gave up...</h2>
+
+        <form class="ending-form">
+          <label for="newGuess">You thought of: </label>
+          <input
+            name="newGuess"
+            type="txt"
+            id="newGuess"
+            placeholder="Your Guess"
+            required
+          />
+
+          <label for="newQuest">Question to differentiate:</label>
+          <input
+            name="newQuest"
+            type="txt"
+            id="newQuest"
+            placeholder="The answer is YES for yours"
+            required
+          />
+
+          <button type="submit" class="btn-add-guess">
+            <i class="fa-solid fa-person-circle-plus"></i>
+            <span>Make me Smarter!</span>
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>CoffeRights &copy; 2021 - Guy Kadosh</footer>
+
+    <div class="modal hidden">
+      <div class="modal-content">
+        <h2 class="modal-head">Yes i Did it!</h2>
+        <button class="btn">
+          <div class="i-wrapper-1">
+            <div class="i-wrapper">
+              <i class="fa-solid fa-fan"></i>
+            </div>
+          </div>
+
+          <span>Alright</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="overlay hidden"></div>
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="js/storage-service.js"></script>
+    <script src="js/quest-service.js"></script>
+    <script src="js/quest-controller.js"></script>
+  </body>
+</html>

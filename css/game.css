@@ -1,0 +1,29 @@
+.quest {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.game-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ending-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ending-form input {
+  margin: 10px;
+  font-size: 1em;
+}
+.ending-form label {
+  font-weight: bold;
+}
+.ending-form input,
+label {
+  height: 40px;
+  width: 300px;
+}
